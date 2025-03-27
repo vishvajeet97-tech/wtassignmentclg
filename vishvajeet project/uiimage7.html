@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding Screen with Dots</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f8f9fa;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            width: 100%;
+            height: 350px;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .content p {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        .bottom-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px 20px;
+        }
+        .dots-container {
+            display: flex;
+            gap: 11px; 
+            margin-right: 200px; 
+        }
+        .dots {
+            width: 10px;
+            height: 10px;
+            background-color: #007bff;
+            border-radius: 50%;
+            animation: bounce 1.5s infinite;
+        }
+        .dots:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        .dots:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+        }
+
+        .button {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            background: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="C:\Users\Vishvajeet Jadav\Pictures\Screenshots\Screenshot 2025-03-27 183937.png"alt="Image">
+        </div>
+        <div class="content">
+            <h2>Lorem Ipsum is simply dummy</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="bottom-container">
+            <div class="dots-container">
+                <div class="dots"></div>
+                <div class="dots"></div>
+                <div class="dots"></div>
+            </div>
+            <button class="button">Next</button>
+        </div>
+    </div>
+</body>
+</html>
