@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        .otp-inputs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .otp-inputs input {
+            width: 50px;
+            height: 50px;
+            font-size: 22px;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .otp-inputs input:focus {
+            border-color: #6a5acd;
+            box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+        }
+        .resend {
+            margin-top: 15px;
+            font-size: 14px;
+            color: red;
+            font-weight: bold;
+        }
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .keypad button {
+            width: 70px;
+            height: 70px;
+            font-size: 22px;
+            border: none;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            outline: none;
+        }
+        .keypad button:hover {
+            background-color: #c0c0c0;
+        }
+        .keypad button:active {
+            background-color: #a0a0a0;
+        }
+        .keypad button:last-child {
+            grid-column: span 3;
+            background-color: #6a5acd;
+            color: white;
+            height: 80px;
+            font-size: 24px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>OTP Verification</h2>
+        <p>Enter the OTP sent to <b>+07-1234-5678-9</b></p>
+        <div class="otp-inputs">
+            <input type="text" maxlength="1" autofocus>
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+        <p class="resend">Resend code in <span id="timer">60s</span></p>
+        <div class="keypad">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>0</button>
+            <button>Submit</button>
+        </div>
+    </div>
+</body>
+</html>
